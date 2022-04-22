@@ -56,15 +56,18 @@ numbers = document.querySelectorAll(".number");
 
 // tạo trang sau
 prevBtn.addEventListener(("click"), () => {
-    (page === 1) ? page = maxPage : page--;
+    (page == 1) ? page = maxPage : page--;
     shopProducts.innerHTML = creatListProducts();
+    console.log(page);
 
 })
 
 // tạo trang trước
 nextBtn.addEventListener(("click"), () => {
-    (page === maxPage) ? page = 1 : page++;
+    (page == maxPage) ? page = 1 : page++;
     shopProducts.innerHTML = creatListProducts();
+    console.log(page);
+
 })
 
 // tạo trang theo số trang

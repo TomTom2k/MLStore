@@ -9,6 +9,34 @@ btnMenu.addEventListener("click", () => {
     btnMenu.querySelector(".fas").classList.toggle("fa-times");
 })
 
+
+// search box
+const searchBox = document.getElementById("search-box");
+
+searchBox.onfocus = () => {
+    searchBox.parentElement.classList.add("active");
+};
+
+searchBox.onblur = () => {
+    searchBox.parentElement.classList.remove("active");
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // events sections
 
 const slideItems = document.querySelectorAll(".slide-item"),
@@ -30,9 +58,9 @@ window.nextSlide = function(e) {
 
 
 
-function productHandler(product) {
+function productHandlerHot(product) {
     return `
-                <a href="/shop/product.html" class="product">
+                <a href="/shop/product.html" class="product hot">
                     <div class="image">
                         <img src="${product.image}" alt="">
                     </div>
@@ -45,18 +73,49 @@ function productHandler(product) {
                 </a>
     `
 };
-
-
-let listProducts = products.map((product) => (product.id < 10 ? productHandler(product) : ''));
-
-
-
+let listProductsHot = products.map((product) => (product.id < 10 ? productHandlerHot(product) : ''));
 let hotProducts = document.getElementById("hot");
-hotProducts.querySelector(".wrapper").innerHTML = listProducts.join('');
+hotProducts.querySelector(".wrapper").innerHTML = listProductsHot.join('');
 
+
+function productHandlerSale(product) {
+    return `
+                <a href="/shop/product.html" class="product sale">
+                    <div class="image">
+                        <img src="${product.image}" alt="">
+                    </div>
+                    <div class="info-product">
+                        <div class="name">${product.title}</div>
+                        <div class="price">${product.price}</div>
+                    </div>
+                    <i class="fas fa-heart left"></i>
+                    <i class="fas fa-shopping-cart right"></i>
+                </a>
+    `
+};
+let listProductsSale = products.map((product) => (product.id < 10 ? productHandlerSale(product) : ''));
 let saleProducts = document.getElementById("sale");
-saleProducts.querySelector(".wrapper").innerHTML = listProducts.join('');
+saleProducts.querySelector(".wrapper").innerHTML = listProductsSale.join('');
 
+
+
+function productHandlerNew(product) {
+    return `
+                <a href="/shop/product.html" class="product new">
+                    <div class="image">
+                        <img src="${product.image}" alt="">
+                    </div>
+                    <div class="info-product">
+                        <div class="name">${product.title}</div>
+                        <div class="price">${product.price}</div>
+                    </div>
+                    <i class="fas fa-heart left"></i>
+                    <i class="fas fa-shopping-cart right"></i>
+                </a>
+    `
+};
+let listProductsNew = products.map((product) => (product.id < 10 ? productHandlerNew(product) : ''));
 let newProducts = document.getElementById("new");
-newProducts.querySelector(".wrapper").innerHTML = listProducts.join('');
+newProducts.querySelector(".wrapper").innerHTML = listProductsNew.join('');
+
 

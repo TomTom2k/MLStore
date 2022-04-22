@@ -99,7 +99,42 @@ section:not(.events) {
     margin: 0 1rem;
     box-shadow: 0 0 0.5rem rgba(0,0,0,0.1);
     position: relative;
-
+}
+.wrapper .product.hot::after {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    content: 'HOT';
+    height: 2rem;
+    text-align: center;
+    background: rgb(194, 10, 10);
+    min-width: 4rem;
+    line-height: 2rem;
+    color: var(--background-50);
+}
+.wrapper .product.sale::after {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    content: '-50%';
+    height: 2rem;
+    text-align: center;
+    background: rgb(255, 196, 0);
+    min-width: 4rem;
+    line-height: 2rem;
+    color: var(--background-50);
+}
+.wrapper .product.new::after {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    content: 'NEW';
+    height: 2rem;
+    text-align: center;
+    background: var(--main-color);
+    min-width: 4rem;
+    line-height: 2rem;
+    color: var(--background-50);
 }
 
 .wrapper .product .image {
@@ -130,7 +165,7 @@ section:not(.events) {
 
 .wrapper .product i {
     position: absolute;
-    top: 1.5rem;
+    top: 3.5rem;
     width: 3rem;
     height: 3rem;
     background: var(--main-color);
@@ -141,6 +176,7 @@ section:not(.events) {
     line-height: 3rem;
     display: none;
     cursor: pointer; 
+    z-index: 100;
 }
 
 .wrapper .product i:hover {
