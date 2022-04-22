@@ -1,0 +1,153 @@
+.logo {
+    transform: scale(1.5);
+    display: flex;
+    justify-content: center;
+}
+
+.frame {
+    width: 100%;
+    height: 100vh;
+    background: var(--linear-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 46rem;
+    max-width: 35rem;
+    background: var(--background-50);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.wrapper .toggle-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+.wrapper .toggle-btn div{
+    width: 50%;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+}
+
+.wrapper .toggle-btn div.active {
+    border-bottom: 0.2rem solid var(--main-color);
+}
+
+.wrapper .toggle-btn div:hover {
+    text-shadow: 0 0 0.4rem var(--main-color);
+}
+
+.group-input {
+    width: 100%;
+    position: relative;
+    margin: 2rem 0 2rem 0;
+}
+
+.group-input label {
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+    background: #fff;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+}
+
+.group-input input {
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: 0.1rem solid var(--text-900);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.group-input.error input {
+    border: 0.1rem solid red;
+    box-shadow: 0 0 0.4rem rgba(255, 0, 0, 0.1);
+}
+
+.group-input .message {
+    color: red;
+    margin: 0 1rem;
+}
+
+#check-box {
+    outline: #0396ff;
+}
+
+.remember {
+    font-size: 1.2rem;
+}
+
+.submit-btn {
+    width: 20rem;
+    border: none;
+    background: var(--linear-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem calc(50% - 10rem) ;
+    color: var(--background-50);
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+}   
+.submit-btn a {
+    color: var(--text-900);
+}
+
+.submit-btn:hover {
+    transform: scale(1.1);
+}
+
+.indefinite {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.icons {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.icons i {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: var(--background-50);
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.15);
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+#login {
+    position: relative;
+    left: 0;
+    /* left: -40rem; */
+
+}
+
+#sign-up {
+    position: relative;
+    top: -26rem;
+    left: 40rem;
+}

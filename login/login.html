@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Store</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+    <!-- css file -->
+
+    <link rel="stylesheet" href="../all/color.css">
+    <link rel="stylesheet" href="../all/style.css">
+    <link rel="stylesheet" href="./style-login.css">
+
+</head>
+<body>
+    <div class="frame">
+        <div class="wrapper">
+            <div class="logo">
+                <h2>ML</h2>
+                <p>Store</p>
+            </div>
+
+            <div class="toggle-btn">
+                <div class="login active" onclick="login()">Đăng nhập</div>
+                <div class="sign-up" onclick="signUp()">Đăng ký</div>
+            </div>
+
+            <from id="login">
+                <div class="group-input">
+                    <label for="email-login">Tài khoản</label>
+                    <input id="email-login" type="text" placeholder="vd: minhluan@gmail.com">
+                    <div class="message"></div>
+                </div>
+                <div class="group-input">
+                    <label for="pass-login" >Mật khẩu</label>
+                    <input id="pass-login" type="password" placeholder="Nhập mật khẩu">
+                    <div class="message"></div>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" name="" id="check-box">
+                    <span class="remember">Nhớ mật khẩu</span>
+                </div>
+                <button class="submit-btn"><a href="../home/index.html">Đăng nhập</a></button>
+                <p class="indefinite">Hoặc</p>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-apple"></i>
+                </div>
+            </from>
+
+            <from id="sign-up">
+                <div class="group-input">
+                    <label for="email-sign-up">Tài khoản</label>
+                    <input id="email-sign-up" type="text" placeholder="vd: minhluan@gmail.com">
+                    <div class="message"></div>
+                </div>
+                <div class="group-input">
+                    <label for="pass-sign-up" >Mật khẩu</label>
+                    <input id="pass-sign-up" type="password" placeholder="Nhập mật khẩu">
+                    <div class="message"></div>
+                </div>
+                <div class="group-input">
+                    <label for="enter-pass" >Nhập lại mật khẩu</label>
+                    <input id="enter-pass" type="password" placeholder="Nhập mật khẩu">
+                    <div class="message"></div>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" name="" id="check-box">
+                    <span class="remember">Đồng ý với mọi điều khoản</span>
+                </div>
+                <!-- <a href="../home/index.html" class="submit-btn">Đăng ký</a> -->
+                <button class="submit-btn"><a href="../home/index.html">Đăng kí</a></button>
+            </from>
+        </div>
+    </div>
+
+
+    <!-- script file -->
+    <script src="./login.js"></script>
+    <script>
+        // xử lí sog in form 
+        Validator({
+            form: '#login',
+            rules: [
+                Validator.isRequired('#email-login'),
+                Validator.isEmail('#email-login'),
+
+                Validator.minLength('#pass-login',6),
+                Validator.isConfirmed('#pass-login', function() {
+                    return '123456';
+                }, 'Mật khẩu '),
+            ]
+        });
+
+
+
+        // xử lý sign up form 
+        Validator({
+            form: '#sign-up',
+            rules: [
+                Validator.isRequired('#email-sign-up'),
+                Validator.isEmail('#email-sign-up'),
+
+                Validator.isRequired('#pass-sign-up'),
+                Validator.minLength('#pass-sign-up',6),
+
+                Validator.isRequired('#enter-pass'),
+                Validator.isConfirmed('#enter-pass', function() {
+                    return document.getElementById('pass-sign-up').value;
+                }, 'Mật khẩu nhập lại'),
+            ]
+        });
+    </script>
+</body>
+</html>
