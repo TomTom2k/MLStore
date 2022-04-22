@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 
     <!-- css file -->
-    <link rel="stylesheet" href="../all/color.css">
+    <link rel="stylesheet" href="./all/color.css">
     <link rel="stylesheet" href="./style-home.css">
-    <link rel="stylesheet" href="../all/style.css">
+    <link rel="stylesheet" href="./all/style.css">
 
 
 
@@ -20,7 +20,37 @@
 <body>
 
     <!-- header starts -->
-    
+    <header>
+    <div class="header-top">
+        <div class="logo">
+            <h2>ML</h2>
+            <p>Store</p>
+        </div>
+        <div class="search-box">
+            <input id="search-box" type="text" placeholder="Nhập sản phẩm bạn muốn tìm">
+            <label for="search-box"><i class="fas fa-search"></i></label>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="menu">
+            <div class="btn-menu" id="btn-menu"><i class="fas fa-bars"></i></div>
+            <div class="menu-section">
+                <a href="./index.html">Trang chủ</a>
+                <a href="./shop/shop.html">Cửa hàng</a>
+                <a href="./introduce/introduce.html">Giới thiệu</a>
+                <a href="./contact/contact.html">Liên hệ</a>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <a href="./login/login.html" class="image-user">
+                <img src="./image/avatar.jfif" alt="">
+            </a>
+        </div>
+        
+    </div>
+    </header>
     <!-- header ends-->
 
     <!-- event section start -->
@@ -29,16 +59,16 @@
             <i class="fas fa-angle-left prev-btn" onclick="prevSlide()"></i>
             <div class="slide-group">
                 <div class="slide-item">
-                    <img src="../image/events/event-1.jpg" alt="">
+                    <img src="./image/events/event-1.jpg" alt="">
                 </div>
                 <div class="slide-item">
-                    <img src="../image/events/event-2.jpg" alt="">
+                    <img src="./image/events/event-2.jpg" alt="">
                 </div>
                 <div class="slide-item">
-                    <img src="../image/events/event-1.jpg" alt="">
+                    <img src="./image/events/event-1.jpg" alt="">
                 </div>
                 <div class="slide-item">
-                    <img src="../image/events/event-2.jpg" alt="">
+                    <img src="./image/events/event-2.jpg" alt="">
                 </div>
             </div>
             <i class="fas fa-angle-right next-btn" onclick="nextSlide()"></i>
@@ -82,13 +112,33 @@
     <!-- main ends -->
 
     <!-- footer starts -->
+    <footer>
+    <div class="icons">
+        <div class="icon-group">
+            <i class="fas fa-phone"></i>
+            <div class="text">+84 999 999 999</div>
+            <div class="text">+84 789 789 789</div>
+        </div>
     
+        <div class="icon-group">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="text">123/321 đường số 1, quận Bình Chánh</div>
+        </div>
+    
+        <div class="icon-group">
+            <i class="fas fa-comments"></i>
+            <div class="text">ngminhluan@gmail.com</div>
+            <div class="text">mlStore@gmail.com</div>
+        </div>
+    
+        <div class="footer">ML Store uy tín, chất lượng, nhiệt tình</div>
+    </div>
+    </footer>
     <!-- footer ends -->
 
 
 
     <!-- javascript file -->
-    <script src="../all/app.js"></script>
     <script type="module" src="./script.js"></script>
 </body>
 </html>

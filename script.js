@@ -1,5 +1,13 @@
-import products from '../all/data.json' assert {type: 'json'};
+import products from './all/data.json' assert {type: 'json'};
 
+
+const btnMenu = document.getElementById("btn-menu");
+
+btnMenu.addEventListener("click", () => {
+    btnMenu.parentElement.querySelector(".menu-section").classList.toggle("active");
+    btnMenu.querySelector(".fas").classList.toggle("fa-bars");
+    btnMenu.querySelector(".fas").classList.toggle("fa-times");
+})
 
 // events sections
 
@@ -24,7 +32,7 @@ function nextSlide() {
 
 function productHandler(product) {
     return `
-                <a href="../shop/product.html" class="product">
+                <a href="/shop/product.html" class="product">
                     <div class="image">
                         <img src="${product.image}" alt="">
                     </div>
