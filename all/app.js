@@ -16,7 +16,7 @@ header.innerHTML = `
     <div class="menu">
         <div class="btn-menu" id="btn-menu"><i class="fas fa-bars"></i></div>
         <div class="menu-section">
-            <a href="../home/index.html">Trang chủ</a>
+            <a href="../index.html">Trang chủ</a>
             <a href="../shop/shop.html">Cửa hàng</a>
             <a href="../introduce/introduce.html">Giới thiệu</a>
             <a href="../contact/contact.html">Liên hệ</a>

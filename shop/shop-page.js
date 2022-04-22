@@ -4,11 +4,13 @@ let maxPage = Math.ceil(products.length/12);
 let pagination = document.querySelector(".pagination .numbers");
 let page = 1;
 
-
+// tạo trang theo số trang
 window.handlerClick = function(e) {
     page = e.innerHTML;
     shopProducts.innerHTML = creatListProducts();
+    console.log(page);
 };
+
 // tạo danh sách sản phảm
 function productHandler(product) {
     return `

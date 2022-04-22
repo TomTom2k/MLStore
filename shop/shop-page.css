@@ -8,6 +8,7 @@ aside {
     padding-top: 1.8rem;
     width: 24%;
     box-shadow: 0.4rem 0 0.4rem rgba(0,0,0,0.1);
+    background: var(--background-50);
 }
 
 aside::after {
