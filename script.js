@@ -18,12 +18,12 @@ widthItem = slideItems[0].offsetWidth;
 
 let count = 0;
 
-function prevSlide() {
+window.prevSlide = function(e) {
     (count === 0) ? count = lengthSlide - 1 : count --;
     mainSlide.style.left = `-${widthItem * count}px`;
 }
 
-function nextSlide() {
+window.nextSlide = function(e) {
     (count === lengthSlide -1) ? count = 0 : count ++;
     mainSlide.style.left = `-${widthItem * count}px`;
 }
