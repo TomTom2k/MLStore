@@ -106,6 +106,33 @@ header {
     background: #efefef;
     display: block;
     border-radius: 0 0 0.5rem 0.5rem;
+    overflow: auto;
+}
+
+.search-block .item-block {
+    padding: 0.5rem;
+    background: var(--background-50);
+    display: flex;
+    margin: 0.5rem 1rem;
+}
+
+.search-block .item-block:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.15);
+}
+
+.search-block .item-block img{
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+.search-block .item-block .name-product {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    color: var(--text-900);
 }
 
 .header-top .search-box i {

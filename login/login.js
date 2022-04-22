@@ -100,8 +100,6 @@ function Validator(options) {
                 }
             }
         });
-
-        // console.log(selectorRules)
     }
 }
 

@@ -13,6 +13,15 @@ btnMenu.addEventListener("click", () => {
 // search box
 const searchBox = document.getElementById("search-box");
 
+function productHandlerSearch(product) {
+    return `
+    <div class="item-block">
+        <img src=${product.image} alt="">
+        <div class="name-product">${product.title}</div>
+    </div>
+    `
+};
+
 searchBox.onfocus = () => {
     searchBox.parentElement.classList.add("active");
 };
@@ -20,6 +29,14 @@ searchBox.onfocus = () => {
 searchBox.onblur = () => {
     searchBox.parentElement.classList.remove("active");
 };
+
+
+searchBox.onkeyup = () => {
+    let listProductsSearch = products.map((product) => (product.title.includes(searchBox.value.toUpperCase()) ? productHandlerSearch(product) : ''));
+    let searchProducts = searchBox.parentElement.querySelector(".search-block");
+    searchProducts.innerHTML = listProductsSearch.join('');
+}
+
 
 
 
