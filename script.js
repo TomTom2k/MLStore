@@ -15,10 +15,10 @@ const searchBox = document.getElementById("search-box");
 
 function productHandlerSearch(product) {
     return `
-    <div class="item-block">
+    <a href="./shop/product.html" class="item-block">
         <img src=${product.image} alt="">
         <div class="name-product">${product.title}</div>
-    </div>
+    </a>
     `
 };
 
@@ -28,7 +28,10 @@ searchBox.onfocus = () => {
 
 searchBox.onblur = () => {
     searchBox.parentElement.classList.remove("active");
+    searchBox.value = ''
 };
+
+
 
 
 searchBox.onkeyup = () => {
