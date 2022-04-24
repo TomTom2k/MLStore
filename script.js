@@ -22,13 +22,16 @@ function productHandlerSearch(product) {
     `
 };
 
+
+// đóng mở khung search
 searchBox.onfocus = () => {
     searchBox.parentElement.classList.add("active");
 };
 
-searchBox.onblur = () => {
+window.onclick = (e) => {
+    if(e.target.closest(".search-box")) return;
     searchBox.parentElement.classList.remove("active");
-    searchBox.value = ''
+    searchBox.value = '';
 };
 
 

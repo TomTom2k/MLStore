@@ -28,9 +28,9 @@ header.innerHTML = `
             </div>
         </div>
         <div class="icons">
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-shopping-cart"></i>
-            <a href="./login/login.html" class="image-user">
+            <a href="../love-product/love.html"><i class="fas fa-heart"></i></a>
+            <a href="../cart/cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="../login/login.html" class="image-user">
                 <img src="../image/avatar.jfif" alt="">
             </a>
         </div>
@@ -61,15 +61,19 @@ function productHandlerSearch(product) {
     `
 };
 
+
+// đóng mở khung search
 searchBox.onfocus = () => {
     searchBox.parentElement.classList.add("active");
 };
 
-searchBox.onblur = () => {
+window.onclick = (e) => {
+    if(e.target.closest(".search-box")) return;
     searchBox.parentElement.classList.remove("active");
-    searchBox.value = ''
-
+    searchBox.value = '';
 };
+
+
 
 
 searchBox.onkeyup = () => {

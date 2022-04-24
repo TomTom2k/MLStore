@@ -4,12 +4,49 @@ let maxPage = Math.ceil(products.length/12);
 let pagination = document.querySelector(".pagination .numbers");
 let page = 1;
 
-// tạo trang theo số trang
-window.handlerClick = function(e) {
-    page = e.innerHTML;
+
+
+const prevBtn = document.getElementById("prev"),
+nextBtn = document.getElementById("next"),
+numbers = document.querySelectorAll(".number");
+
+// tạo trang sau
+prevBtn.addEventListener(("click"), () => {
+    (page == 1) ? page = maxPage : page--;
     shopProducts.innerHTML = creatListProducts();
     console.log(page);
+
+})
+
+// tạo trang trước
+nextBtn.addEventListener(("click"), () => {
+    (page == maxPage) ? page = 1 : page++;
+    shopProducts.innerHTML = creatListProducts();
+    console.log(page);
+
+})
+// tạo trang theo số trang
+window.handlerClick = (e) => {
+    page = e.innerHTML;
+    shopProducts.innerHTML = creatListProducts();
 };
+
+// tạo trang theo filter
+const sections = document.querySelectorAll(".section");
+
+window.handlerClickFilter = (e,id) => {
+    page = (id % maxPage) + 1;
+    sections.forEach((section) => {
+        if(section === e) {
+            section.classList.add("active");
+        } else {
+            section.classList.remove("active");
+        }
+    })
+    shopProducts.innerHTML = creatListProducts();
+}
+
+
 
 // tạo danh sách sản phảm
 function productHandler(product) {
@@ -50,24 +87,4 @@ shopProducts.innerHTML = creatListProducts();
 
 
 
-const prevBtn = document.getElementById("prev"),
-nextBtn = document.getElementById("next"),
-numbers = document.querySelectorAll(".number");
 
-// tạo trang sau
-prevBtn.addEventListener(("click"), () => {
-    (page == 1) ? page = maxPage : page--;
-    shopProducts.innerHTML = creatListProducts();
-    console.log(page);
-
-})
-
-// tạo trang trước
-nextBtn.addEventListener(("click"), () => {
-    (page == maxPage) ? page = 1 : page++;
-    shopProducts.innerHTML = creatListProducts();
-    console.log(page);
-
-})
-
-// tạo trang theo số trang
