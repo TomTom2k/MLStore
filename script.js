@@ -87,7 +87,7 @@ window.nextSlide = function(e) {
 
 function productHandlerHot(product) {
     return `
-                <a href="/shop/product.html" class="product hot" id=${product.id} onclick="transmittion(this)">
+                <a href="./shop/product.html" class="product hot" id=${product.id} onclick="transmittion(this)">
                     <div class="image">
                         <img src="${product.image}" alt="">
                     </div>
@@ -107,7 +107,7 @@ hotProducts.querySelector(".wrapper").innerHTML = listProductsHot.join('');
 
 function productHandlerSale(product) {
     return `
-                <a href="/shop/product.html" class="product sale" id=${product.id} onclick="transmittion(this)">
+                <a href="./shop/product.html" class="product sale" id=${product.id} onclick="transmittion(this)">
                     <div class="image">
                         <img src="${product.image}" alt="">
                     </div>
