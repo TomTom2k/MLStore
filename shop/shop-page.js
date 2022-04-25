@@ -51,7 +51,7 @@ window.handlerClickFilter = (e,id) => {
 // tạo danh sách sản phảm
 function productHandler(product) {
     return `
-                <a href="../shop/product.html" class="product">
+                <a href="./product.html" class="product" id=${product.id} onclick="transmittion(this)">
                     <div class="image">
                         <img src="${product.image}" alt="">
                     </div>
@@ -79,7 +79,7 @@ function creatListProducts() {
         }
     }
 
-    let listProducts = products.map((product) => ((product.id < 12*page) && (product.id >= 12*page-12)? productHandler(product) : ''));
+    let listProducts = products.map((product,index) => ((product.id < 12*page) && (product.id >= 12*page-12)? productHandler(product) : ''));
     return listProducts.join('')
 }
 
@@ -87,4 +87,8 @@ shopProducts.innerHTML = creatListProducts();
 
 
 
+// truyền item vào giỏ hàng
+window.transmittion = (e) => {
+    localStorage.setItem('item', e.id);
+}
 

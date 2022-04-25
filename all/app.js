@@ -1,5 +1,15 @@
 import products from './data.json' assert {type: 'json'};
 
+// tạo localstorage
+// thêm sản phẩm vào giỏ hàng
+let items;
+if(localStorage.getItem('items')) {
+    items = localStorage.getItem('items');
+} else {
+    items = [];
+}
+
+
 // thêm header vào trang
 const header = document.createElement("header");
 
@@ -54,12 +64,17 @@ const searchBox = document.getElementById("search-box");
 
 function productHandlerSearch(product) {
     return `
-    <a href="../shop/product.html" class="item-block">
+    <a href="../shop/product.html" class="item-block" id=${product.id} onclick="transmittion(this)">
         <img src=${product.image} alt="">
         <div class="name-product">${product.title}</div>
     </a>
     `
 };
+
+// truyền thông tin sản phẩm tìm kiếm
+window.transmittion = (e) => {
+    localStorage.setItem('item', e.id);
+}
 
 
 // đóng mở khung search
@@ -111,4 +126,7 @@ footer.innerHTML = `
 `
 
 document.body.appendChild(footer)
+
+
+
 

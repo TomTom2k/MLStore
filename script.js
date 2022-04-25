@@ -1,6 +1,5 @@
 import products from './all/data.json' assert {type: 'json'};
 
-
 const btnMenu = document.getElementById("btn-menu");
 
 btnMenu.addEventListener("click", () => {
@@ -15,13 +14,17 @@ const searchBox = document.getElementById("search-box");
 
 function productHandlerSearch(product) {
     return `
-    <a href="./shop/product.html" class="item-block">
+    <a href="../shop/product.html" class="item-block" id=${product.id} onclick="transmittion(this)">
         <img src=${product.image} alt="">
         <div class="name-product">${product.title}</div>
     </a>
     `
 };
 
+// truyền thông tin sản phẩm tìm kiếm
+window.transmittion = (e) => {
+    localStorage.setItem('item', e.id);
+}
 
 // đóng mở khung search
 searchBox.onfocus = () => {
@@ -42,6 +45,7 @@ searchBox.onkeyup = () => {
     let searchProducts = searchBox.parentElement.querySelector(".search-block");
     searchProducts.innerHTML = listProductsSearch.join('');
 }
+
 
 
 
@@ -83,7 +87,7 @@ window.nextSlide = function(e) {
 
 function productHandlerHot(product) {
     return `
-                <a href="/shop/product.html" class="product hot">
+                <a href="/shop/product.html" class="product hot" id=${product.id} onclick="transmittion(this)">
                     <div class="image">
                         <img src="${product.image}" alt="">
                     </div>
@@ -103,7 +107,7 @@ hotProducts.querySelector(".wrapper").innerHTML = listProductsHot.join('');
 
 function productHandlerSale(product) {
     return `
-                <a href="/shop/product.html" class="product sale">
+                <a href="/shop/product.html" class="product sale" id=${product.id} onclick="transmittion(this)">
                     <div class="image">
                         <img src="${product.image}" alt="">
                     </div>
@@ -124,7 +128,7 @@ saleProducts.querySelector(".wrapper").innerHTML = listProductsSale.join('');
 
 function productHandlerNew(product) {
     return `
-                <a href="/shop/product.html" class="product new">
+                <a href="/shop/product.html" class="product new" id=${product.id} onclick="transmittion(this)">
                     <div class="image">
                         <img src="${product.image}" alt="">
                     </div>
