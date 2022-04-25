@@ -128,7 +128,7 @@ saleProducts.querySelector(".wrapper").innerHTML = listProductsSale.join('');
 
 function productHandlerNew(product) {
     return `
-                <a href="/shop/product.html" class="product new" id=${product.id} onclick="transmittion(this)">
+                <a href="./shop/product.html" class="product new" id=${product.id} onclick="transmittion(this)">
                     <div class="image">
                         <img src="${product.image}" alt="">
                     </div>
