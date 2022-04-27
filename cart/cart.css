@@ -19,9 +19,19 @@ article .cart-nav div:hover {
 
 .cart-body section {
     display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-columns: 0.15fr 1fr 5fr 1fr;
     border-bottom: 0.1rem solid #ddd;
     gap: 1rem;
+    position: relative;
+}
+
+.cart-body section .remove {
+    background: rgb(227, 0, 26);
+}
+
+.cart-body section .remove i {
+    font-size: 2rem;
+    color: var(--text-900);
 }
 
 .cart-body section .image {

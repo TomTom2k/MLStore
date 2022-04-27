@@ -20,7 +20,7 @@ header.innerHTML = `
             <p>Store</p>
         </div>
         <div class="search-box">
-            <input id="search-box" type="text" placeholder="Nhập sản phẩm bạn muốn tìm">
+            <input id="search-box" type="text" placeholder="Bạn muốn tìm">
             <label for="search-box"><i class="fas fa-search"></i></label>
             <div class="search-block">
                 <p>Bạn muốn tìm</p>
@@ -117,8 +117,8 @@ footer.innerHTML = `
 
     <div class="icon-group">
         <i class="fas fa-comments"></i>
-        <div class="text">ngminhluan@gmail.com</div>
-        <div class="text">mlStore@gmail.com</div>
+        <div class="text">Nguyễn Minh Luận <br>20122981</div>
+        <div class="text">Nguyễn Trường Tuấn Kiệt <br>20048301</div>
     </div>
 
     <div class="footer">ML Store uy tín, chất lượng, nhiệt tình</div>

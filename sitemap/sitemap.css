@@ -1,0 +1,32 @@
+.sitemap {
+    padding: 4rem;
+}
+
+.sitemap p {
+    font-size: 1.5rem;
+    text-indent: 4rem;
+    margin-bottom: 4rem;
+}
+
+.sitemap aside {
+    padding: 2rem;
+}
+
+.sitemap aside a h2 {
+    font-size: 1.8rem;
+    color: var(--text-900);
+    font-weight: 400;
+}
+
+.sitemap aside a h2:hover {
+    font-weight: 500;
+}
+
+.sitemap aside a p {
+    color: var(--text-700);
+    text-indent: 4rem;
+    margin-bottom: 2rem;
+    color: 1.4;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid #eee;
+}

@@ -240,9 +240,11 @@ footer .icons .icon-group {
     padding: 0 0.5rem;
 }
 
-footer .icons .icon-group:not(.icon-group:last-child) {
-    border-right: 0.1rem solid #eee;
+footer .icons .icon-group:not(.icon-group:first-child) {
+    border-left: 0.1rem solid #eee;
 }
+
+
 
 footer .icons i {
     width: 3rem;
@@ -254,6 +256,7 @@ footer .icons i {
     line-height: 3rem;
     margin: 1rem 0;
     opacity: 0.9;
+    cursor: pointer;
 }
 
 footer .icons i:hover {
@@ -266,6 +269,10 @@ footer .icons .text {
     color: var(--text-700);
     font-weight: 500;
     letter-spacing: 0.1rem;
+}
+
+footer .icons .text span {
+    font-size: 0.8rem;
 }
 
 footer .footer {
@@ -322,9 +329,23 @@ footer .footer {
 
 @media (max-width: 600px) {
     .header-bottom .menu .menu-section {
-        width: 100vh;
+        width: 100vw;
     }
-    #search-box {
+    .logo {
+        margin: 0;
+    }
+}
+@media (max-width: 432px) {
+    html {
+        font-size: 50%;
+    }
+    .header-top .search-box i {
         display: none;
+    }
+    footer .icons .text {
+        display: none;
+    }
+    footer {
+        height: 15rem;
     }
 }

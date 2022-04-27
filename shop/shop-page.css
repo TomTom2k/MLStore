@@ -75,6 +75,26 @@ main {
     height: 25rem;
     overflow: hidden;
     border-radius: 0.5rem;
+    position: relative;
+}
+
+
+.list-product .product .image::after {
+    position: absolute;
+    content: "Xem thêm";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background: rgba(0,0,0,0.2);
+    color: var(--background-50);
+    font-size: 1.8rem;
+    text-align: center;
+    display: none;
+}
+
+.list-product .product:hover .image::after {
+    display: block;
 }
 
 .list-product .product .image img {
@@ -96,39 +116,8 @@ main {
     letter-spacing: 0.1rem;
 }
 
-.list-product .product i {
-    position: absolute;
-    top: 1.5rem;
-    width: 3rem;
-    height: 3rem;
-    background: var(--main-color);
-    border-radius: 50%;
-    color: var(--background-50);
-    font-size: 1.4rem;
-    text-align: center;
-    line-height: 3rem;
-    display: none;
-    cursor: pointer; 
-}
-
-.list-product .product i:hover {
-    transform: scale(1.1);
-}
-
 .list-product .product:hover {
     box-shadow: 0 0 1rem rgba(0,0,0,0.2);
-}
-
-.list-product .product:hover i {
-    display: block;
-}
-
-.list-product .product .left {
-    left: 1.5rem;
-}
-
-.list-product .product .right {
-    right: 1.5rem;
 }
 
 .pagination {

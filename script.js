@@ -95,8 +95,6 @@ function productHandlerHot(product) {
                         <div class="name">${product.title}</div>
                         <div class="price">${product.price}</div>
                     </div>
-                    <i class="fas fa-heart left"></i>
-                    <i class="fas fa-shopping-cart right"></i>
                 </a>
     `
 };
@@ -115,8 +113,6 @@ function productHandlerSale(product) {
                         <div class="name">${product.title}</div>
                         <div class="price">${product.price}</div>
                     </div>
-                    <i class="fas fa-heart left"></i>
-                    <i class="fas fa-shopping-cart right"></i>
                 </a>
     `
 };
@@ -136,8 +132,6 @@ function productHandlerNew(product) {
                         <div class="name">${product.title}</div>
                         <div class="price">${product.price}</div>
                     </div>
-                    <i class="fas fa-heart left"></i>
-                    <i class="fas fa-shopping-cart right"></i>
                 </a>
     `
 };

@@ -6,7 +6,8 @@ let items = JSON.parse(localStorage.getItem('items'));
 
 handlerItem = (item) => {
     return `
-            <section class="product">
+            <section class="product" id=${item.image}>
+                <div class="remove"></div>
                 <div class="image">
                     <img src=${item.image} alt="">
                 </div>
@@ -26,6 +27,8 @@ handlerItem = (item) => {
 
 let bodyCart = document.querySelector(".cart-body");
 bodyCart.innerHTML = items.map((item) => handlerItem(item)).join('');
+
+// xóa sản phẩm
 
 
 

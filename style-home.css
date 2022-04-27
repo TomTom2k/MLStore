@@ -142,6 +142,25 @@ section:not(.events) {
     height: 22.5rem;
     overflow: hidden;
     border-radius: 0.5rem;
+    position: relative;
+}
+
+.wrapper .product .image::after {
+    position: absolute;
+    content: "Xem thêm";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    background: rgba(0,0,0,0.2);
+    color: var(--background-50);
+    font-size: 1.8rem;
+    text-align: center;
+    display: none;
+}
+
+.wrapper .product:hover .image::after {
+    display: block;
 }
 
 .wrapper .product .image img {
@@ -163,32 +182,8 @@ section:not(.events) {
     letter-spacing: 0.1rem;
 }
 
-.wrapper .product i {
-    position: absolute;
-    top: 3.5rem;
-    width: 3rem;
-    height: 3rem;
-    background: var(--main-color);
-    border-radius: 50%;
-    color: var(--background-50);
-    font-size: 1.4rem;
-    text-align: center;
-    line-height: 3rem;
-    display: none;
-    cursor: pointer; 
-    z-index: 100;
-}
-
-.wrapper .product i:hover {
-    transform: scale(1.1);
-}
-
 .wrapper .product:hover {
     box-shadow: 0 0 1rem rgba(0,0,0,0.2);
-}
-
-.wrapper .product:hover i {
-    display: block;
 }
 
 .wrapper .product .left {
