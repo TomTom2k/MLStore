@@ -10,8 +10,29 @@ if(localStorage.getItem('items')) {
 }
 
 window.addItem = (e) => {
-    items.push(products[index])
-    localStorage.setItem('items', JSON.stringify(items))
+    let available = false;
+    countItem();
+    const quantity = e.parentElement.parentElement.querySelector("input").value;
+
+    if(items.length) {
+        items.forEach((item) => {
+            if(item.id == e.id) {
+                item.quantity = parseInt(item.quantity) + parseInt(quantity);
+                localStorage.setItem('items', JSON.stringify(items));
+                available = true;
+            };
+        });
+        if(!available) {
+            products[index].quantity = quantity;
+            items.push(products[index])
+            localStorage.setItem('items', JSON.stringify(items))
+        }
+    } else {
+        products[index].quantity = quantity;
+        items.push(products[index])
+        localStorage.setItem('items', JSON.stringify(items))
+    }
+    countItem();
 }
 
 
@@ -42,7 +63,7 @@ article.innerHTML = `
                 <option value="L">L</option>
                 <option value="XL">XL</option>
             </select>
-            <input type="number" placeholder="0" min="0">
+            <input type="number" value="1" placeholder="1" min="1">
         </div>
         <div class="buttons">
             <button class="btn-primary">Yêu thích</button>

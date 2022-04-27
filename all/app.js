@@ -35,11 +35,13 @@ header.innerHTML = `
                 <a href="../shop/shop.html">Cửa hàng</a>
                 <a href="../introduce/introduce.html">Giới thiệu</a>
                 <a href="../contact/contact.html">Liên hệ</a>
+                <a href="../sitemap/sitemap.html">Hướng dẫn</a>
+
             </div>
         </div>
         <div class="icons">
-            <a href="../love-product/love.html"><i class="fas fa-heart"></i></a>
-            <a href="../cart/cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <a href="../notification/notification.html"><i class="fas fa-bell"></i></a>
+            <a href="../cart/cart.html"><i class="fas fa-shopping-cart" id="cart"><div class="count">1</div></i></a>
             <a href="../login/login.html" class="image-user">
                 <img src="../image/avatar.jfif" alt="">
             </a>
@@ -96,6 +98,18 @@ searchBox.onkeyup = () => {
     let searchProducts = searchBox.parentElement.querySelector(".search-block");
     searchProducts.innerHTML = listProductsSearch.join('');
 }
+
+
+
+// giỏ hàng
+window.countItem = () => {
+    const cart = document.getElementById("cart");
+    let count = JSON.parse(localStorage.getItem("items")).length;
+    cart.querySelector(".count").innerHTML = `${count}`
+};
+
+countItem();
+
 
 
 // thêm footer vào trang

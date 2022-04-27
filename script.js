@@ -46,6 +46,14 @@ searchBox.onkeyup = () => {
     searchProducts.innerHTML = listProductsSearch.join('');
 }
 
+// đếm số phần tử của giỏ hàng
+window.countItem = () => {
+    const cart = document.getElementById("cart");
+    let count = JSON.parse(localStorage.getItem("items")).length;
+    cart.querySelector(".count").innerHTML = `${count}`
+};
+countItem();
+
 
 
 

@@ -2,12 +2,10 @@
 let items = JSON.parse(localStorage.getItem('items'));
 
 
-
-
 handlerItem = (item) => {
     return `
-            <section class="product" id=${item.image}>
-                <div class="remove"></div>
+            <section class="product" id=${item.id}>
+                <div class="remove" onclick="removeItem(this)"></div>
                 <div class="image">
                     <img src=${item.image} alt="">
                 </div>
@@ -15,7 +13,7 @@ handlerItem = (item) => {
                     <h3>${item.title}</h3>
                     <p>Đơn giá : <span class="price">${item.price}</span></p>
                     <p>Kích cỡ : <span class="size">XL</span></p>
-                    <p>Số lượng : <span class="quantity">1</span></p>
+                    <p>Số lượng : <span class="quantity">${item.quantity}</span></p>
                 </div>
                 <div class="total">
                     <p></p>
@@ -29,8 +27,6 @@ let bodyCart = document.querySelector(".cart-body");
 bodyCart.innerHTML = items.map((item) => handlerItem(item)).join('');
 
 // xóa sản phẩm
-
-
 
 
 
@@ -68,3 +64,13 @@ products.forEach((product) => {
     }
 });
 
+
+// xóa sản phẩm
+window.removeItem = (e) => {
+    let product = e.parentElement.id;
+    console.log(product)
+    items = items.filter((item) => item.id != product)
+    localStorage.setItem("items", JSON.stringify(items))
+    bodyCart.innerHTML = items.map((item) => handlerItem(item)).join('');
+    countItem();
+}

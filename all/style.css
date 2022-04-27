@@ -200,6 +200,25 @@ header {
     font-size: 1.5rem;
     color: var(--text-900);
     cursor: pointer;
+ 
+}
+
+#cart {
+    position: relative;
+}
+
+.header-bottom .icons i .count {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background: rgb(194, 10, 10);
+    border-radius: 50%;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--background-50);
+    font-weight: 400;
 }
 
 .header-bottom .icons i:hover {
