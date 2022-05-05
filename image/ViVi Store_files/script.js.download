@@ -1,7 +1,0 @@
-const btnMenu = document.getElementById("btn-menu");
-
-btnMenu.addEventListener("click", () => {
-    btnMenu.parentElement.querySelector(".menu-section").classList.toggle("active");
-    btnMenu.querySelector(".fas").classList.toggle("fa-bars");
-    btnMenu.querySelector(".fas").classList.toggle("fa-times");
-})

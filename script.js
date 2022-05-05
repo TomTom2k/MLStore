@@ -1,5 +1,15 @@
 import products from './all/data.json' assert {type: 'json'};
 
+
+// lịch sử mua hàng trước đó
+let items;
+if(localStorage.getItem('items')) {
+    items = localStorage.getItem('items');
+} else {
+    localStorage.setItem('items','[]');
+    items = [];
+}
+
 const btnMenu = document.getElementById("btn-menu");
 
 btnMenu.addEventListener("click", () => {
@@ -39,7 +49,7 @@ window.onclick = (e) => {
 
 
 
-
+// tìm kiếm
 searchBox.onkeyup = () => {
     let listProductsSearch = products.map((product) => (product.title.includes(searchBox.value.toUpperCase()) ? productHandlerSearch(product) : ''));
     let searchProducts = searchBox.parentElement.querySelector(".search-block");

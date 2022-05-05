@@ -74,3 +74,12 @@ window.removeItem = (e) => {
     bodyCart.innerHTML = items.map((item) => handlerItem(item)).join('');
     countItem();
 }
+
+// Thanh toán
+const abateBtn = document.getElementById("abate");
+const total = document.getElementById("total")
+abateBtn.addEventListener("click", () => {
+    if(total.innerHTML == 0) {
+        alert("vui lòng chọn sản phẩm")
+    }
+})

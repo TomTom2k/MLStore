@@ -1,15 +1,5 @@
 import products from './data.json' assert {type: 'json'};
 
-// tạo localstorage
-// thêm sản phẩm vào giỏ hàng
-let items;
-if(localStorage.getItem('items')) {
-    items = localStorage.getItem('items');
-} else {
-    items = [];
-}
-
-
 // thêm header vào trang
 const header = document.createElement("header");
 
@@ -89,8 +79,6 @@ window.onclick = (e) => {
     searchBox.parentElement.classList.remove("active");
     searchBox.value = '';
 };
-
-
 
 
 searchBox.onkeyup = () => {
