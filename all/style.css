@@ -59,14 +59,14 @@ article {
 
 .logo h2 {
     padding: 0 1rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
     background: var(--main-color);
     border-radius: 1.5rem 1rem;
     color: var(--background-50);
 }
 
 .logo p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 500;
     color: var(--text-900);
 }
@@ -83,7 +83,7 @@ header {
 .header-top {
     padding: 1rem 2rem;
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -138,7 +138,7 @@ header {
 }
 
 .header-top .search-box i {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-left: 2rem;
     color: var(--text-900);
 }
@@ -153,7 +153,7 @@ header {
 
 .header-bottom {
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -180,7 +180,7 @@ header {
 }
 
 .header-bottom .menu .menu-section a {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--text-900);
     opacity: 0.7;
 }
@@ -198,7 +198,7 @@ header {
 
 .header-bottom .icons i {
     margin-right: 3rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--text-900);
     cursor: pointer;
 }
@@ -227,8 +227,8 @@ header {
 }
 
 .header-bottom .icons .image-user  {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     overflow: hidden;
 } 

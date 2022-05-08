@@ -105,36 +105,39 @@ section:not(.events) {
     top: 1.5rem;
     left: 0;
     content: 'HOT';
-    height: 2rem;
+    height: 2.5rem;
     text-align: center;
-    background: rgb(194, 10, 10);
-    min-width: 4rem;
-    line-height: 2rem;
+    min-width: 6rem;
+    line-height: 2.5rem;
     color: var(--background-50);
+    font-size: 1.4rem;
+    background: rgb(194, 10, 10);
 }
 .wrapper .product.sale::after {
     position: absolute;
     top: 1.5rem;
     left: 0;
-    content: '-50%';
-    height: 2rem;
+    content: 'HOT';
+    height: 2.5rem;
     text-align: center;
-    background: rgb(255, 196, 0);
-    min-width: 4rem;
-    line-height: 2rem;
+    min-width: 6rem;
+    line-height: 2.5rem;
     color: var(--background-50);
+    font-size: 1.4rem;
+    background: rgb(255, 196, 0);
 }
 .wrapper .product.new::after {
     position: absolute;
     top: 1.5rem;
     left: 0;
-    content: 'NEW';
-    height: 2rem;
+    content: 'HOT';
+    height: 2.5rem;
     text-align: center;
-    background: var(--main-color);
-    min-width: 4rem;
-    line-height: 2rem;
+    min-width: 6rem;
+    line-height: 2.5rem;
     color: var(--background-50);
+    font-size: 1.4rem;
+    background: var(--main-color);
 }
 
 .wrapper .product .image {
@@ -170,16 +173,29 @@ section:not(.events) {
 }
 
 .wrapper .product .info-product .name {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
+    letter-spacing: -0rem;
     color: var(--text-900);
 }
 
 .wrapper .product .info-product .price {
     font-size: 1.5rem;
-    color: var(--text-900);
-    font-weight: 500;
+    color: red;
+    font-weight: 400;
     letter-spacing: 0.1rem;
+}
+
+.wrapper .product .info-product .price {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.wrapper .product .info-product .price span {
+    color: var(--text-900);
+    font-size: 1.2rem;
 }
 
 .wrapper .product:hover {

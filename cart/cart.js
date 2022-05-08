@@ -68,7 +68,6 @@ products.forEach((product) => {
 // xóa sản phẩm
 window.removeItem = (e) => {
     let product = e.parentElement.id;
-    console.log(product)
     items = items.filter((item) => item.id != product)
     localStorage.setItem("items", JSON.stringify(items))
     bodyCart.innerHTML = items.map((item) => handlerItem(item)).join('');

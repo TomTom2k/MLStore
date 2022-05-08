@@ -14,7 +14,6 @@ numbers = document.querySelectorAll(".number");
 prevBtn.addEventListener(("click"), () => {
     (page == 1) ? page = maxPage : page--;
     shopProducts.innerHTML = creatListProducts();
-    console.log(page);
 
 })
 
@@ -22,7 +21,6 @@ prevBtn.addEventListener(("click"), () => {
 nextBtn.addEventListener(("click"), () => {
     (page == maxPage) ? page = 1 : page++;
     shopProducts.innerHTML = creatListProducts();
-    console.log(page);
 
 })
 // tạo trang theo số trang
@@ -57,7 +55,7 @@ function productHandler(product) {
                     </div>
                     <div class="info-product">
                         <div class="name">${product.title}</div>
-                        <div class="price">${product.price}</div>
+                        <div class="price">${product.price} <span>VND</span></div>
                     </div>
                 </a>
     `

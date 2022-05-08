@@ -111,9 +111,22 @@ main {
 
 .list-product .product .info-product .price {
     font-size: 1.5rem;
-    color: var(--text-900);
+    color: red;
     font-weight: 500;
     letter-spacing: 0.1rem;
+}
+
+.list-product .product .info-product .price {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.list-product .product .info-product .price span {
+    color: var(--text-900);
+    font-size: 1.2rem;
+    margin-left: 0.4rem;
 }
 
 .list-product .product:hover {

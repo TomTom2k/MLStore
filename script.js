@@ -10,6 +10,8 @@ if(localStorage.getItem('items')) {
     items = [];
 }
 
+
+// navbar
 const btnMenu = document.getElementById("btn-menu");
 
 btnMenu.addEventListener("click", () => {
@@ -47,14 +49,16 @@ window.onclick = (e) => {
     searchBox.value = '';
 };
 
-
-
 // tìm kiếm
 searchBox.onkeyup = () => {
     let listProductsSearch = products.map((product) => (product.title.includes(searchBox.value.toUpperCase()) ? productHandlerSearch(product) : ''));
     let searchProducts = searchBox.parentElement.querySelector(".search-block");
     searchProducts.innerHTML = listProductsSearch.join('');
 }
+
+
+
+
 
 // đếm số phần tử của giỏ hàng
 window.countItem = () => {
@@ -111,7 +115,7 @@ function productHandlerHot(product) {
                     </div>
                     <div class="info-product">
                         <div class="name">${product.title}</div>
-                        <div class="price">${product.price}</div>
+                        <div class="price">${product.price} <span>VND</span></div>
                     </div>
                 </a>
     `
@@ -129,7 +133,7 @@ function productHandlerSale(product) {
                     </div>
                     <div class="info-product">
                         <div class="name">${product.title}</div>
-                        <div class="price">${product.price}</div>
+                        <div class="price">${product.price}<span>VND</span></div>
                     </div>
                 </a>
     `
@@ -148,7 +152,7 @@ function productHandlerNew(product) {
                     </div>
                     <div class="info-product">
                         <div class="name">${product.title}</div>
-                        <div class="price">${product.price}</div>
+                        <div class="price">${product.price}<span>VND</span></div>
                     </div>
                 </a>
     `
