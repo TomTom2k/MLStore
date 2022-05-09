@@ -189,7 +189,7 @@ section:not(.events) {
 .wrapper .product .info-product .price {
     margin-top: 1rem;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     align-items: end;
 }
 

@@ -13,7 +13,8 @@ html {
 }
 
 article {
-    margin-top: 9rem;
+    margin-top: 11rem;
+    min-height: calc(100vh - 31rem);
 }
 
 .btn {

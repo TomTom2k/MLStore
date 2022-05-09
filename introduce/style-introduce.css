@@ -46,6 +46,92 @@ article .text p {
     margin: 1rem 0;
 }
 
+.admin {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.admin .title {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--text-900);
+}
+
+.admin .admin-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+}
+
+.admin .admin-items .admin-group {
+    width: 30rem;
+    background: var(--background-100);
+    border-radius: 2rem;
+    box-shadow: 0 0 0.4rem rgba(0,0,0,0.2);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+}
+
+.admin .admin-items .admin-group:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.admin .admin-items .admin-group .image-admin {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.admin .admin-items .admin-group .image-admin img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.admin .admin-items .admin-group h4 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-900);
+}
+
+.admin .admin-items .admin-group p {
+    margin-bottom: 3rem;
+    color: var(--text-700);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.admin .admin-items .admin-group .icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.admin .admin-items .admin-group .icons i {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: var(--linear-color);
+    line-height: 3.5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--background-50);
+    cursor: pointer;
+}
+
+.admin .admin-items .admin-group .icons i:hover {
+    transform: translateY(-1rem) scale(1.1);
+    
+}
+
 
 
 @media (max-width: 960px) {
@@ -68,13 +154,18 @@ article .text p {
     .text .btn-primary {
         margin: 2rem 0;
     }
+
+    .admin .admin-items {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 600px) {
     .text h1 {
         font-size: 1.6rem;
     }
-
+    
 
 }
 

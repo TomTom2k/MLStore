@@ -104,9 +104,10 @@ main {
 }
 
 .list-product .product .info-product .name {
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 500;
     color: var(--text-900);
+    margin: 1rem 0;
 }
 
 .list-product .product .info-product .price {
@@ -114,14 +115,10 @@ main {
     color: red;
     font-weight: 500;
     letter-spacing: 0.1rem;
-}
-
-.list-product .product .info-product .price {
-    margin-top: 1rem;
     display: flex;
     justify-content: end;
     align-items: end;
-}
+} 
 
 .list-product .product .info-product .price span {
     color: var(--text-900);
